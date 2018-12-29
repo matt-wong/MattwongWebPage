@@ -34,13 +34,18 @@ footer {
     height: 100%;
    }
 
+   .quoteDiv {
+    height: 200px;
+}
+
+.quoteDiv:nth-of-type(2n){
+    background-color: #f0f0f0;
+}
+
 .quoteDiv img{
-    border: 0 none;
+    border: solid grey 10px;
+    margin: 2px;
     max-width: 100%;
     float: left;
     vertical-align: middle;
-}
-
-.quoteDiv {
-    height: 200px;
 }

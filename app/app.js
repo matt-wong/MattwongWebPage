@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 app.get('/learnMore', function(req, res){
 //Random Photos with Quotes
 arrayOfPeopleImages = [];
-for (var i=0; i<3; i++){
+for (var i=0; i<30; i++){
     let personImage = faker.image.avatar();
     console.log(personImage);
     arrayOfPeopleImages[i] = personImage;
