@@ -1,0 +1,28 @@
+<%- include partials/header.ejs %>
+    <div class="container-fluid">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Testimonies</h1>
+                    <p class="lead">Find out what everyone is saying about MattWong.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                        <% for(var i = 0; i < arrayOfPeopleImages.length; i++){ %>
+                            <div class="quoteDiv">
+                                <img src="<%= arrayOfPeopleImages[i] %>"  alt="Second slide">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt doloribus, nostrum quibusdam aliquid.</p>
+                            </div>
+                        <% } %>
+                </div>
+                <div class="col-sm-6">
+                    <img src="">
+                </div>
+        
+            </div>
+    </div>
+   
+
+
+<%- include partials/footer.ejs %>
