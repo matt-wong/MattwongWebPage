@@ -3,7 +3,8 @@ var app = express();
 var path = require("path");
 var request = require("request");
 var bodyParser = require("body-parser");
-var faker = require("faker")
+var faker = require("faker");
+var loremIpsum = require('lorem-ipsum');
 
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
@@ -18,9 +19,10 @@ app.get('/learnMore', function(req, res){
 //Random Photos with Quotes
 arrayOfPeopleImages = [];
 for (var i=0; i<30; i++){
-    let personImage = faker.image.avatar();
-    console.log(personImage);
-    arrayOfPeopleImages[i] = personImage;
+    var currImgUrl =  faker.image.avatar();
+    var personObject = new Object({imageUrl : currImgUrl, fName : faker.name.firstName(), lName : faker.name.lastName(), quote : loremIpsum()});
+    console.log(personObject);
+    arrayOfPeopleImages[i] = personObject;
 }
 
 console.log(faker.company.catchPhrase());

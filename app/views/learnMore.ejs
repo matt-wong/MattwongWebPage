@@ -11,8 +11,10 @@
                 <div class="col-sm-6">
                         <% for(var i = 0; i < arrayOfPeopleImages.length; i++){ %>
                             <div class="quoteDiv">
-                                <img src="<%= arrayOfPeopleImages[i] %>"  alt="Second slide">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt doloribus, nostrum quibusdam aliquid.</p>
+                                <img src="<%= arrayOfPeopleImages[i]['imageUrl'] %>"  alt="Second slide">
+                                <h4><%= arrayOfPeopleImages[i]['fName'] %>  <%= arrayOfPeopleImages[i]['lName'] %></h4>
+                                <h4></h4>
+                                <p><%= arrayOfPeopleImages[i]['quote'] %></p>
                             </div>
                         <% } %>
                 </div>
